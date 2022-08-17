@@ -1,17 +1,21 @@
 # PROYECTO DE DATASCIENCE BÁSICO
 ---
-## Integrantes:
+## Integrantes
 - Cano Angel Rodrigo
 - Dominguez Sotomayor Santiago Ismael
 - Molina Leguiza Juan Cruz
 - Rios Lopez Ramiro Ignacio
 ---
-## Carrera:
+## Carrera
 - Ingeniería en Sistemas de Información
-## Materia:
+## Cátedra
 - Ingeniería de Software
-## Institución académica:
+## Institución académica
 - Universidad Nacional de La Rioja
+## Equipo de cátedra
+- Mg. Ms. Lic. Marcelo Fabio Roldán
+- Lic. Cristina Gramajo
+- Lic. Pablo Córdoba
 ---
 ### Objetivos (trabajo en progreso)
 - Aplicación de escritorio con interfaz gráfico de usuario
