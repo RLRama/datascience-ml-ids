@@ -13,7 +13,7 @@
 ## Institución académica:
 - Universidad Nacional de La Rioja
 ---
-### Objetivos (trabajo en progreso
+### Objetivos (trabajo en progreso)
 - Aplicación de escritorio con interfaz gráfico de usuario
 - Programación en Python
 - Creación de clasificador (método de aprendizaje a determinar)
