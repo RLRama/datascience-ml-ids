@@ -18,3 +18,4 @@
 - Programación en Python
 - Creación de clasificador (método de aprendizaje a determinar)
 - Visualización de datos con alguna librería de Python a determinar
+- Determinar conjunto de datos a utilizar para generar predicciones
