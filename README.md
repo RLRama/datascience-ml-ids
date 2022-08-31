@@ -6,7 +6,7 @@
 - Molina Leguiza Juan Cruz
 - Rios Lopez Ramiro Ignacio
 ---
-##Año académico
+## Año académico
 - 2022
 ## Carrera
 - Ingeniería en Sistemas de Información
