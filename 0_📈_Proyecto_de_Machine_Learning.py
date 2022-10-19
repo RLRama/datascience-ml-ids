@@ -1,15 +1,38 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
+import sklearn as sk
+import matplotlib as mplt
+import seaborn as sns
+from sklearn import preprocessing
 from sklearn.svm import SVC
 from sklearn.linear_model import LogisticRegression
+from sklearn.linear_model import Perceptron
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
-from sklearn.metrics import precision_score, recall_score
+from sklearn.metrics import precision_score, recall_score, accuracy_score
+from matplotlib.colors import ListedColormap
+import matplotlib.pyplot as plt
+from matplotlib import rcParams
+from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import GridSearchCV
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.naive_bayes import GaussianNB
+rcParams["figure.figsize"] = (10, 10)
+sns.set(style="white")
+sns.set(style="whitegrid", color_codes=True)
 
 def main():
+    st.set_page_config(
+        page_title="The RAMBros",
+        page_icon="🤖",
+    )
+
     st.title("Aplicación web de clasificación binaria")
     st.sidebar.title("Parámetros de clasificación binaria")
     st.markdown("Detección de tipo de tumor (benigno o maligno)")
@@ -54,7 +77,7 @@ def main():
     x_train, x_test, y_train, y_test = split(df)
     
     st.sidebar.subheader("Elegir método de clasificación")
-    classifier = st.sidebar.selectbox("Clasificador", ("Máquina de vector soporte", "Regresión logística", "Bosque aleatorio"))
+    classifier = st.sidebar.selectbox("Clasificador", ("Máquina de vector soporte", "Regresión logística", "Bosque aleatorio", "Perceptrón"))
 
     if classifier == 'Máquina de vector soporte':
         st.sidebar.subheader("Hiperparámetros de modelo")
@@ -77,7 +100,7 @@ def main():
     if classifier == 'Regresión logística':
         st.sidebar.subheader("Hiperparámetros de modelo")
         C = st.sidebar.number_input("C (Parámetro de regularización)", 0.01, 10.0, step=0.01, key='C_LR')
-        max_iter = st.sidebar.slider("Maxiumum number of interations", 100, 500, key='max_iter')
+        max_iter = st.sidebar.slider("Máximo número de iteraciones", 100, 500, key='max_iter')
         metrics = st.sidebar.multiselect("Métricas a imprimir",('Matriz de confusión', 'Curva de característica operativa de receptor', 'Curva de precisión-exhaustividad'))
 
         if st.sidebar.button("Clasificar", key='classify'):
@@ -99,7 +122,7 @@ def main():
         metrics = st.sidebar.multiselect("Métricas a imprimir",('Matriz de confusión', 'Curva de característica operativa de receptor', 'Curva de precisión-exhaustividad'))
 
         if st.sidebar.button("Clasificar", key='classify'):
-            st.subheader("")
+            st.subheader("Resultados de bosque aleatorio")
             model = RandomForestClassifier(n_estimators=n_estimators, max_depth=max_depth, bootstrap=bootstrap, n_jobs=-1)
             model.fit(x_train, y_train)
             accuracy = model.score(x_test, y_test)
