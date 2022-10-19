@@ -1,31 +1,24 @@
 import streamlit as st
-import pandas as pd
 import numpy as np
-import os
-import sklearn as sk
-import matplotlib as mplt
-import seaborn as sns
-from sklearn import preprocessing
-from sklearn.svm import SVC
-from sklearn.linear_model import LogisticRegression
-from sklearn.linear_model import Perceptron
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import StandardScaler
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
-from sklearn.metrics import precision_score, recall_score, accuracy_score
-from matplotlib.colors import ListedColormap
+import pandas as pd
 import matplotlib.pyplot as plt
-from matplotlib import rcParams
-from sklearn.model_selection import cross_val_score
-from sklearn.model_selection import GridSearchCV
-from sklearn.neighbors import KNeighborsClassifier
+import seaborn as sns
+import plotly.plotly as py
+import plotly.tools as tls
+import plotly.graph_objs as go
+import cufflinks as cf
+from pylab import rcParams
+from bokeh.plotting import figure, output_file, show, output_notebook
+from bokeh.models import ColumnDataSource
+from bokeh.palettes import Spectral6
+from bokeh.models import HoverTool
+from sklearn.ensemble import RandomForestClassifier
 from sklearn.tree import DecisionTreeClassifier
-from sklearn.naive_bayes import GaussianNB
-rcParams["figure.figsize"] = (10, 10)
-sns.set(style="white")
-sns.set(style="whitegrid", color_codes=True)
+from sklearn.linear_model import LogisticRegression
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, precision_score, recall_score
+from sklearn.metrics import confusion_matrix 
+from sklearn.metrics import classification_report
 
 def main():
     st.set_page_config(
