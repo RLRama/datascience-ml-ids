@@ -20,8 +20,9 @@
 - Lic. Pablo Córdoba
 ---
 ### Objetivos (trabajo en progreso)
-- Aplicación de escritorio con interfaz gráfico de usuario
+- Aplicación web alojada en la nube usando Streamlit Cloud
 - Programación en Python
-- Creación de clasificador (método de aprendizaje a determinar)
-- Visualización de datos con alguna librería de Python a determinar
-- Determinar conjunto de datos a utilizar para generar predicciones
+- Creación de clasificador (múltiples métodos de aprendizaje)
+- Visualización de datos con matplotlib, Bokeh, Seaborn y 
+- Predicción de clasificación de tipo de tumor (benigno/maligno) usando el conjunto de datos de https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
+- Mostrar métricas de precisión, exhaustividad, etc.
