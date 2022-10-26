@@ -5,6 +5,12 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 
+@st.cache
+def load_data():
+    df = pd.read_csv('data.csv')
+    df = df.dropna(axis=1)
+    return df
+
 st.set_page_config(
     page_title="Predicción con ML",
     page_icon="🤖",
@@ -19,13 +25,16 @@ st.sidebar.title("Parámetros de clasificación binaria")
 st.markdown("Detección de tipo de tumor (benigno o maligno)")
 st.sidebar.markdown("Ingeniería en Software - The RAMBros")
 
-df = pd.read_csv('data.csv')
-df = df.dropna(axis=1)
+df = load_data()
 
 st.header("Estructura de datos fuente")
 st.dataframe(df)
 
-from sklearn.preprocessing import LabelEncoder
-sns.set_style("darkgrid", {"axes.facecolor": ".9"})
-fig = sns.countplot(data=df, x=df["diagnosis"])
+fig = plt.figure(figsize=(8,6))
+plt.title("Diagnósticos tomados")
+plt.xticks(rotation=60, fontsize=12)
+sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
+
+if __name__ == "__main__":
+    main()
