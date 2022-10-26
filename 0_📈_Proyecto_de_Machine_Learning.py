@@ -22,4 +22,4 @@ df = pd.read_csv('data.csv')
 df = df.dropna(axis=1)
 
 sns.set_style("darkgrid",{"axes.facecolor": ".9"})
-sns.countplot(df['diagnosis'], label="Cantidad")
+sns.barplot(df['diagnosis'], label="Cantidad")
