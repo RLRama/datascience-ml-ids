@@ -29,4 +29,4 @@ from sklearn.preprocessing import LabelEncoder
 labelencoder_Y = LabelEncoder()
 df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
 
-print(labelencoder_Y.fit_transform(df.iloc[:,1].values))
+st.write(print(labelencoder_Y.fit_transform(df.iloc[:,1].values)))
