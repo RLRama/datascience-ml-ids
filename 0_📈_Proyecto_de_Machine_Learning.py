@@ -26,6 +26,6 @@ st.header("Estructura de datos fuente")
 st.dataframe(df)
 
 from sklearn.preprocessing import LabelEncoder
-
+sns.set_style("darkgrid", {"axes.facecolor": ".9"})
 fig = sns.countplot(df['diagnosis'], label="Cantidad")
 st.pyplot(fig)
