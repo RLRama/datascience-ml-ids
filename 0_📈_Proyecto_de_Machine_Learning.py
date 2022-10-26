@@ -32,9 +32,6 @@ st.dataframe(df)
 
 fig = plt.figure(figsize=(8,6))
 plt.title("Diagnósticos tomados")
-plt.xticks(rotation=60, fontsize=12)
+plt.xticks(fontsize=12)
 sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
-
-if __name__ == "__main__":
-    main()
