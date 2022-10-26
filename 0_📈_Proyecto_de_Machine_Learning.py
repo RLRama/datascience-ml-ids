@@ -24,4 +24,4 @@ df = df.dropna(axis=1)
 
 st.header("Estructura de datos fuente")
 st.dataframe(df)
-st.bar_chart(data=df, x="diagnosis")
+sns.countplot(x="diagnosis", data=df)
