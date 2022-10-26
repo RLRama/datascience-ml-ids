@@ -24,4 +24,9 @@ df = df.dropna(axis=1)
 
 st.header("Estructura de datos fuente")
 st.dataframe(df)
-sns.countplot(x="diagnosis", data=df)
+
+from sklearn.preprocessing import LabelEncoder
+labelencoder_Y = LabelEncoder()
+df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
+
+print(labelencoder_Y.fit_transform(df.iloc[:,1].values))
