@@ -18,3 +18,6 @@ st.sidebar.title("Parámetros de clasificación binaria")
 st.markdown("Detección de tipo de tumor (benigno o maligno)")
 st.sidebar.markdown("Ingeniería en Software - The RAMBros")
 
+df = pd.read_csv('data.csv')
+df = df.dropna(axis=1)
+st.write(df.shape)
