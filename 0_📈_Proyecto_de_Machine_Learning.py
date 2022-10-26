@@ -25,7 +25,5 @@ df = df.dropna(axis=1)
 labelencoder_Y = LabelEncoder()
 df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
 
-st.write(labelencoder_Y.fit_transform(df.iloc[:,1].values))
-
 sns.set_style("darkgrid",{"axes.facecolor": ".9"})
 sns.countplot(df['diagnosis'], label="Cantidad")
