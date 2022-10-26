@@ -27,5 +27,5 @@ st.dataframe(df)
 
 from sklearn.preprocessing import LabelEncoder
 sns.set_style("darkgrid", {"axes.facecolor": ".9"})
-fig = sns.countplot(x=df["diagnosis"])
+fig = sns.countplot(data=df, x=df["diagnosis"])
 st.pyplot(fig)
