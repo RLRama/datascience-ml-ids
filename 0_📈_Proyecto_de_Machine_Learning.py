@@ -27,4 +27,5 @@ st.dataframe(df)
 
 from sklearn.preprocessing import LabelEncoder
 
-st.write(df['diagnosis'].value_counts())
+fig = sns.countplot(df['diagnosis'], label="Cantidad")
+st.pyplot(fig)
