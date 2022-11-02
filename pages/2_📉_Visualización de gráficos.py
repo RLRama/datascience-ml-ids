@@ -35,7 +35,7 @@ df = load_data()
 y = df.diagnosis
 list = ['id','diagnosis']
 x = df.drop(list,axis=1)
-df1 = df.describe(include='all').fillna("").astype("str")
+df1 = x.describe(include='all').fillna("").astype("str")
 st.write(df1)
 
 st.subheader('Matriz de correlación')
