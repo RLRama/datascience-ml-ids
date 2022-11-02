@@ -14,7 +14,6 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
 
-
 labelencoder_Y = LabelEncoder()
 
 @st.cache
@@ -34,11 +33,21 @@ st.image(
     width=100,
 )
 st.title("Aplicación web de clasificación binaria")
-st.markdown("Detección de tipo de tumor (benigno o maligno)")
-st.markdown("**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**")
+st.markdown(
+    """
+    - Detección de tipo de tumor (benigno o maligno)
+    - **1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**
+    - [Enlace de acceso al conjunto de datos original](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
+    """
+)
+
 st.sidebar.markdown(
     """
-    Ingeniería en Software - año 2022 - The RAMBros - Proyecto de ciencia de datos
+    - Ingeniería en Software
+    - Universidad Nacional de La Rioja
+    - 2022
+    - The RAMBros
+    - Proyecto de ciencia de datos
     """
 )
 
