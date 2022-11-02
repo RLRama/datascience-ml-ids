@@ -49,4 +49,6 @@ with st.expander("Ver explicación"):
         """
     )
 
-st.line_chart(x="diagnosis",data=df)
+radius = df[['radius_mean','radius_se','radius_worst','diagnosis']]
+fig4 = sns.pairplot(radius, hue='diagnosis',palette="husl", markers=["o", "s"],size=4)
+st.pyplot(fig4)
