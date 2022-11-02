@@ -73,6 +73,8 @@ sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
 y = df.diagnosis
 diagB, diagM = y.value_counts()
+st.write('Número de diagnósticos benignos: ', diagB)
+st.write('Número de diagnósticos malignos: ', diagM)
 
 st.markdown("**Correlación** entre las columnas")
 st.dataframe(df.corr())
