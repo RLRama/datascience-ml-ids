@@ -41,7 +41,13 @@ st.sidebar.markdown("Ingeniería en Software - The RAMBros")
 
 df = load_data()
 
-st.header("Estructura de datos fuente")
+st.subheader("Estructura de datos fuente")
+st.markdown(
+    """
+    Muestra de la cantidad de observaciones por variable categórica
+    (en este caso**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**)
+    """
+)
 st.dataframe(df)
 
 fig = plt.figure(figsize=(8,6))
@@ -53,7 +59,12 @@ st.pyplot(fig)
 st.markdown("**Correlación** entre las columnas")
 st.dataframe(df.corr())
 
-st.markdown("**Mapa de calor** para visualizar la **correlación** entre las columnas")
+st.subheader('Mapa de calor')
+st.markdown(
+    """
+    Muestra de la variación la cantidad de observaciones en relación a las variables
+    """
+)
 fig2 = plt.figure(figsize=(20,20))
 sns.heatmap(df.corr(), annot=True, fmt='.0%')
 plt.gcf().set_size_inches(40, 20)
