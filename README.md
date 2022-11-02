@@ -1,7 +1,7 @@
 # PROYECTO DE DATASCIENCE BÁSICO
 ---
 ## Integrantes
-- Cano Angel Rodrigo
+- Cano Ángel Rodrigo
 - Dominguez Sotomayor Santiago Ismael
 - Molina Leguiza Juan Cruz
 - Rios Lopez Ramiro Ignacio
@@ -23,6 +23,6 @@
 - Aplicación web alojada en la nube usando Streamlit Cloud
 - Programación en Python
 - Creación de clasificador (múltiples métodos de aprendizaje)
-- Visualización de datos con matplotlib, Bokeh, Seaborn y 
+- Visualización de datos con matplotlib, Bokeh, Seaborn
 - Predicción de clasificación de tipo de tumor (benigno/maligno) usando el conjunto de datos de https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data
 - Mostrar métricas de precisión, exhaustividad, etc.
