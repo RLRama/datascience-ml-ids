@@ -4,6 +4,15 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+
 
 labelencoder_Y = LabelEncoder()
 
@@ -48,3 +57,52 @@ fig2 = plt.figure(figsize=(20,20))
 sns.heatmap(df.corr(), annot=True, fmt='.0%')
 plt.gcf().set_size_inches(40, 20)
 st.pyplot(fig2)
+
+X = df.iloc[:, 2:31].values
+Y = df.iloc[:, 1].values
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
+
+sc = StandardScaler()
+X_train = sc.fit_transform(X_train)
+X_test = sc.transform(X_test)
+
+def models(X_train,Y_train):
+  
+  from sklearn.linear_model import LogisticRegression
+  log = LogisticRegression(random_state = 0)
+  log.fit(X_train, Y_train)
+  
+  from sklearn.neighbors import KNeighborsClassifier
+  knn = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
+  knn.fit(X_train, Y_train)
+
+  from sklearn.svm import SVC
+  svc_lin = SVC(kernel = 'linear', random_state = 0)
+  svc_lin.fit(X_train, Y_train)
+
+  from sklearn.svm import SVC
+  svc_rbf = SVC(kernel = 'rbf', random_state = 0)
+  svc_rbf.fit(X_train, Y_train)
+
+  from sklearn.naive_bayes import GaussianNB
+  gauss = GaussianNB()
+  gauss.fit(X_train, Y_train)
+
+  from sklearn.tree import DecisionTreeClassifier
+  tree = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
+  tree.fit(X_train, Y_train)
+
+  from sklearn.ensemble import RandomForestClassifier
+  forest = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
+  forest.fit(X_train, Y_train)
+
+  st.write('[0] Precisión de regresión logística:', log.score(X_train, Y_train))
+  st.write('[1] Precisión de k-vecinos más cercanos:', knn.score(X_train, Y_train))
+  st.write('[2] Precisión de máquina de vector soporte (rbf):', svc_lin.score(X_train, Y_train))
+  st.write('[3] Precisión de máquina de vector soporte (lineal):', svc_rbf.score(X_train, Y_train))
+  st.write('[4] Precisión de Naive Bayes (Gaussiana):', gauss.score(X_train, Y_train))
+  st.write('[5] Precisión de árbol de decisión:', tree.score(X_train, Y_train))
+  st.write('[6] Precisión de bosque aleatorio:', forest.score(X_train, Y_train))
+  
+  return log, knn, svc_lin, svc_rbf, gauss, tree, forest
+
