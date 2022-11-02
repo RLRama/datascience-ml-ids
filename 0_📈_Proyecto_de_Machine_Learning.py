@@ -16,6 +16,8 @@ from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 from sklearn.metrics import accuracy_score
 
+
+
 labelencoder_Y = LabelEncoder()
 
 @st.cache
@@ -134,7 +136,7 @@ def models(X_train,Y_train):
   st.write('[1] Precisión de k-vecinos más cercanos:', knn.score(X_train, Y_train))
   st.write('[2] Precisión de máquina de vector soporte (rbf):', svc_lin.score(X_train, Y_train))
   st.write('[3] Precisión de máquina de vector soporte (lineal):', svc_rbf.score(X_train, Y_train))
-  st.write('[4] Precisión de Naive Bayes (Gaussiana):', gauss.score(X_train, Y_train))
+  st.write('[4] Precisión de clasificador bayesiano ingenuo (Gaussiana):', gauss.score(X_train, Y_train))
   st.write('[5] Precisión de árbol de decisión:', tree.score(X_train, Y_train))
   st.write('[6] Precisión de bosque aleatorio:', forest.score(X_train, Y_train))
   
