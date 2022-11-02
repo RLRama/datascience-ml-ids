@@ -188,6 +188,6 @@ st.subheader("Datos adicionales")
 st.markdown("Otras métricas y otras formas de obtener la precisión del clasificador a prueba")
 for i in range(len(model)):
   st.write('Modelo ', i)
-  classification_report(Y_test, model[i].predict(X_test))
+  st.text(classification_report(Y_test, model[i].predict(X_test)))
   st.write('Precisión: ', accuracy_score(Y_test, model[i].predict(X_test)))
   st.write()
