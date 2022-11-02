@@ -3,6 +3,15 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
+import plotly.plotly as py
+import plotly.tools as tls
+import plotly.graph_objs as go
+import cufflinks as cf
+from pylab import rcParams
+from bokeh.plotting import figure, output_file, show, output_notebook
+from bokeh.models import ColumnDataSource
+from bokeh.palettes import Spectral6
+from bokeh.models import HoverTool
 from sklearn.preprocessing import LabelEncoder
 
 labelencoder_Y = LabelEncoder()
