@@ -32,6 +32,12 @@ def load_data():
 
 df = load_data()
 
+y = df.diagnosis
+list = ['Unnamed: 32','id','diagnosis']
+x = df.drop(list,axis=1)
+df1 = df.describe(include='all').fillna("").astype("str")
+st.write(df1)
+
 st.subheader('Matriz de correlación')
 st.markdown('Ayuda a comprender la correlación entre las variables')
 fig3 = plt.figure(figsize=(20,20))
