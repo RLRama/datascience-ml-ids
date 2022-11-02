@@ -30,9 +30,12 @@ def load_data():
     df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
     return df
 
-df.describe()
-
 df = load_data()
+
+list = ['Unnamed: 32','id','diagnosis']
+x = df.drop(list,axis = 1)
+
+x.describe()
 
 st.subheader('Matriz de correlación')
 st.markdown('Ayuda a comprender la correlación entre las variables')
