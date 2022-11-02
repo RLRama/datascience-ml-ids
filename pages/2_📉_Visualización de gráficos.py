@@ -49,6 +49,19 @@ with st.expander("Ver explicación"):
         """
     )
 
+st.subheader('Gráficos de relación de pares')
+st.markdown('Grafican relaciones de pares, de forma que cada variable es mostrada junto a la otra (**0** y **1**)')
+st.caption('Medidas de radio de tumor (media, desvío estándar y peor caso)')
 radius = df[['radius_mean','radius_se','radius_worst','diagnosis']]
 fig4 = sns.pairplot(radius, hue='diagnosis',palette="husl", markers=["o", "s"],size=4)
 st.pyplot(fig4)
+
+st.caption('Medidas de textura de tumor (media, desvío estándar y peor caso)')
+texture = df[['texture_mean','texture_se','texture_worst','diagnosis']]
+fig5 = sns.pairplot(texture, hue='diagnosis', palette="Blues_d",size=4, kind="reg")
+st.pyplot(fig5)
+
+st.caption('Medidas de perímetro de tumor (media, desvío estándar y peor caso)')
+perimeter = df[['perimeter_mean','perimeter_se','perimeter_worst','diagnosis']]
+fig6 = sns.pairplot(perimeter, hue='diagnosis', size = 4, kind="reg")
+st.pyplot(fig6)
