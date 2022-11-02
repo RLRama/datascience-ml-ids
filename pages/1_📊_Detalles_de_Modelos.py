@@ -78,6 +78,13 @@ def wikia():
         - Paso 2: determinar la probabilidad de probabilidad con cada atributo para cada clase.
         - Paso 3: poner estos valores en el teorema de Bayes y calcular la probabilidad posterior.
         - Paso 4: ver qué clase tiene una probabilidad más alta, dado que la variable de entrada pertenece a la clase de probabilidad más alta.
+        #### Ventajas
+        - Es fácil y rápido predecir la clase de conjunto de datos de prueba. También funciona bien en la predicción multiclase.
+        - Cuando se mantiene la suposición de independencia, un clasificador Naive Bayes funciona mejor en comparación con otros modelos como la Regresión Logística y se necesitan menos datos de entrenamiento.
+        - Funciona bien en el caso de variables de entrada categóricas comparada con variables numéricas.
+        #### Desventajas
+        - Si la variable categórica tiene una categoría en el conjunto de datos de prueba, que no se observó en el conjunto de datos de entrenamiento, el modelo asignará una probabilidad de 0 y no podrá hacer una predicción. Esto se conoce a menudo como frecuencia cero. Para resolver esto, podemos utilizar la técnica de alisamiento.
+        - Otra limitación de Naive Bayes es la asunción de predictores independientes. En la vida real, es casi imposible que obtengamos un conjunto de predictores que sean completamente independientes.
         """
     )
     
