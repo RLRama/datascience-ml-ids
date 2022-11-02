@@ -42,14 +42,14 @@ st.sidebar.markdown("Ingeniería en Software - The RAMBros")
 df = load_data()
 
 st.subheader("Estructura de datos fuente")
-st.markdown(
-    """
-    Muestra de la cantidad de observaciones por variable categórica
-    (en este caso**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**)
-    """
-)
 st.dataframe(df)
 
+st.subheader('Gráfico countplot')
+st.markdown(
+    """
+    Muestra de la cantidad de observaciones por variable categórica (en este caso **1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**)
+    """
+)
 fig = plt.figure(figsize=(8,6))
 plt.title("Diagnósticos tomados")
 plt.xticks(fontsize=12)
@@ -120,7 +120,8 @@ def models(X_train,Y_train):
 
 model = models(X_train,Y_train)
 
-st.markdown("Construcción de matriz de confusión")
+st.subheader("Matrices de confusión")
+st.markdown("Construcción de matriz de confusión por cada modelo")
 
 for i in range(len(model)):
   cm = confusion_matrix(Y_test, model[i].predict(X_test))
