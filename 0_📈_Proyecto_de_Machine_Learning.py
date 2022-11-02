@@ -5,10 +5,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 
+labelencoder_Y = LabelEncoder()
+
 @st.cache
 def load_data():
     df = pd.read_csv('data.csv')
     df = df.dropna(axis=1)
+    df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
     return df
 
 st.set_page_config(
@@ -29,10 +32,6 @@ df = load_data()
 
 st.header("Estructura de datos fuente")
 st.dataframe(df)
-
-from sklearn.preprocessing import LabelEncoder
-labelencoder_Y = LabelEncoder()
-df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
 
 fig = plt.figure(figsize=(8,6))
 plt.title("Diagnósticos tomados")
