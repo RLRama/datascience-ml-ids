@@ -74,10 +74,10 @@ def wikia():
         - P(D): probabilidad de los datos (independientemente de la hipótesis). Esto se conoce como probabilidad previa.
         - P(h|D): es la probabilidad de la hipótesis h dada los datos D. Esto se conoce como la probabilidad posterior.
         #### Pasos para que el clasificador Naive Bayes calcule la probabilidad de un evento:
-        - Paso 1: calcular la probabilidad previa para las etiquetas de clase dadas.
-        - Paso 2: determinar la probabilidad de probabilidad con cada atributo para cada clase.
-        - Paso 3: poner estos valores en el teorema de Bayes y calcular la probabilidad posterior.
-        - Paso 4: ver qué clase tiene una probabilidad más alta, dado que la variable de entrada pertenece a la clase de probabilidad más alta.
+        1. calcular la probabilidad previa para las etiquetas de clase dadas.
+        2. determinar la probabilidad de probabilidad con cada atributo para cada clase.
+        3. poner estos valores en el teorema de Bayes y calcular la probabilidad posterior.
+        4. ver qué clase tiene una probabilidad más alta, dado que la variable de entrada pertenece a la clase de probabilidad más alta.
         #### Ventajas
         - Es fácil y rápido predecir la clase de conjunto de datos de prueba. También funciona bien en la predicción multiclase.
         - Cuando se mantiene la suposición de independencia, un clasificador Naive Bayes funciona mejor en comparación con otros modelos como la Regresión Logística y se necesitan menos datos de entrenamiento.
