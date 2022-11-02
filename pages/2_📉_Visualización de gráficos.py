@@ -49,6 +49,8 @@ with st.expander("Ver explicación"):
         """
     )
 
-st.subheader('Matriz de confusión')
-plot_confusion_matrix(model, x_test, y_test, display_labels=class_names)
-st.pyplot()
+fig4 = plt.figure(figsize=(8,6))
+plt.title("Diagnósticos tomados")
+plt.xticks(fontsize=12)
+sns.pie(x="diagnosis",data=df)
+st.pyplot(fig4)
