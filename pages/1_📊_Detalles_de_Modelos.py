@@ -55,7 +55,15 @@ def wikia():
         2. Seleccionar los “k” elementos más cercanos.
         3. Realizar una “votación de mayoría” entre los k puntos: los de una clase/etiqueta que “dominen” decidirán su clasificación final.
         Teniendo en cuenta esto, para decidir la clase de un punto es importante el valor de K, ya que determinará a qué grupo pertenecen los puntos, sobre todo las fronteras entre grupos.
-        Para medir la “cercanía” entre puntos están la distancia Euclidiana o la Cosine Similarity.
+        Para medir la “cercanía” entre puntos están la [distancia Euclidiana](https://es.wikipedia.org/wiki/Distancia_euclidiana) o la [Cosine Similarity](https://es.wikipedia.org/wiki/Similitud_coseno).
+
+        """
+    )
+
+    st.header("Clasificador bayesiano ingenuo")
+    st.markdown(
+        """
+
 
         """
     )
