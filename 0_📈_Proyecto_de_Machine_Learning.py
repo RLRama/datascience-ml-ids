@@ -12,6 +12,7 @@ from sklearn.svm import SVC
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix
 
 
 labelencoder_Y = LabelEncoder()
@@ -107,3 +108,19 @@ def models(X_train,Y_train):
   return log, knn, svc_lin, svc_rbf, gauss, tree, forest
 
 model = models(X_train,Y_train)
+
+st.markdown("Construcción de matriz de confusión")
+
+for i in range(len(model)):
+  cm = confusion_matrix(Y_test, model[i].predict(X_test))
+  
+  TN = cm[0][0]
+  TP = cm[1][1]
+  FN = cm[1][0]
+  FP = cm[0][1]
+  
+  st.write('Matriz de confusión:')
+  st.write(cm)
+  st.write('Modelo [{}] - Precisión = {}'.format(i,  (TP + TN) / (TP + TN + FN + FP)))
+  st.write()
+
