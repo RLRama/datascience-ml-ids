@@ -136,6 +136,8 @@ with st.expander("Ver explicación"):
         """
         Para tareas de clasificación, compara los resultados del clasificador puesto a prueba
         bajo juicios confiables externos (en este caso, los usuarios o investigadores)
+        > Precisión = tp / tp + fp
+        tp = positivos verdaderos, fp = falsos positivos
         """
     )
 
