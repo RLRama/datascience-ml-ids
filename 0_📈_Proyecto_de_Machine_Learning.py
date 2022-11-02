@@ -60,7 +60,7 @@ df = load_data()
 st.subheader("Estructura de datos fuente")
 st.dataframe(df)
 
-st.subheader('Gráfico countplot')
+st.subheader('Gráfico contador')
 st.markdown(
     """
     Muestra de la cantidad de observaciones por variable categórica (en este caso **1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**)

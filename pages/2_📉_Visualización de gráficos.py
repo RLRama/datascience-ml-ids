@@ -30,6 +30,8 @@ def load_data():
     df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
     return df
 
+df.describe()
+
 df = load_data()
 
 st.subheader('Matriz de correlación')
