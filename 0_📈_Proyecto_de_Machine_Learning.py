@@ -140,3 +140,10 @@ for i in range(len(model)):
   st.write('Modelo [{}] - Precisión = {}'.format(i,  (TP + TN) / (TP + TN + FN + FP)))
   st.write()
 
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        En el campo del aprendizaje de máquina (específicamente en clasificación estadística),
+        una matriz de confusión permite ver el rendimiento de un algoritmo, generalmente uno supervisado
+        """
+    )
