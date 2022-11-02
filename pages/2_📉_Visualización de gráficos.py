@@ -36,7 +36,7 @@ y = df.diagnosis
 list = ['id','diagnosis']
 x = df.drop(list,axis=1)
 df1 = df.describe(include='all').fillna("").astype("str")
-st.write(df.describe)
+st.write(df1)
 
 st.subheader('Matriz de correlación')
 st.markdown('Ayuda a comprender la correlación entre las variables')
