@@ -33,7 +33,7 @@ def load_data():
 df = load_data()
 
 y = df.diagnosis
-list = ['Unnamed: 32','id','diagnosis']
+list = ['id','diagnosis']
 x = df.drop(list,axis=1)
 df1 = df.describe(include='all').fillna("").astype("str")
 st.write(df1)
