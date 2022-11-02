@@ -32,8 +32,20 @@ def load_data():
 
 df = load_data()
 
+st.subheader('Matriz de correlación')
+st.markdown('Ayuda a comprender la correlación entre las variables')
 fig3 = plt.figure(figsize=(20,20))
 df_corr = df.corr()
 mask = np.triu(df_corr, k=1)
-sns.heatmap(df_corr,cmap= 'YlGnBu', annot=True, fmt=".2f", mask=mask)
+sns.heatmap(df_corr, cmap= 'YlGnBu', annot=True, fmt=".2f", mask=mask)
 st.pyplot(fig3)
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        Una matriz de correlación es simplemente una tabla que muestra los
+        coeficientes de correlación entre diferentes variables. Es una gran
+        herramienta para sumarizar grandes conjuntos de datos y visualizar patrones
+        en los datos dados.
+        """
+    )
+
