@@ -47,4 +47,26 @@ def wikia():
         """
     )
 
+    st.header("k-Nearest Neighbor")
+    st.markdown(
+        """
+        Es un algoritmo basado en instancia de tipo supervisado de ML. Puede usarse para clasificar nuevas muestras(valores discretos) o para predecir(regresión,valores continuos).
+        Sirve para clasificar valores buscando los puntos de datos “similares” aprendidos en la etapa de entrenamiento y haciendo conjeturas de nuevos puntos basado en esa clasificación.
+        Busca observaciones más cercanas a la que se está tratando de predecir y clasificar el punto de interés basado en la mayoría de datos que le rodean.
+        Se aplica en Sistemas de recomendación, búsqueda semántica y detección de anomalías.
+        Ventajas
+        Es sencillo de aprender e implementar
+        Desventajas
+        Utiliza todo el dataset para entrenar “cada punto” y por eso requiere de uso de mucha memoria y recursos de procesamiento.
+        ¿Cómo funciona?
+        1. Calcular la distancia entre el ítem a clasificar y el resto de ítems del dataset de entrenamiento,
+        2. Seleccionar los “k” elementos más cercanos.
+        3. Realizar una “votación de mayoría” entre los k puntos: los de una clase/etiqueta que “dominen” decidirán su clasificación final.
+        Teniendo en cuenta esto, para decidir la clase de un punto es importante el valor de K, ya que determinará a qué grupo pertenecen los puntos, sobre todo las fronteras entre grupos.
+        Para medir la “cercanía” entre puntos están la distancia Euclidiana o la Cosine Similarity.
+
+        """
+    )
+    
+
 wikia()
