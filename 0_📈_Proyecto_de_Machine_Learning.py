@@ -73,6 +73,14 @@ fig2 = plt.figure(figsize=(20,20))
 sns.heatmap(df.corr(), annot=True, fmt='.0%')
 plt.gcf().set_size_inches(40, 20)
 st.pyplot(fig2)
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        Un mapa de calor es una técnica de visualización de datos que muestra la magnitud de un fenómeno
+        como un color en dos dimensiones. La variación del color es por tono o intensidad, dando pistas visuales
+        de cómo se agrupa o varía el fenómeno sobre el espacio.
+        """
+    )
 
 X = df.iloc[:, 2:31].values
 Y = df.iloc[:, 1].values
@@ -144,6 +152,6 @@ with st.expander("Ver explicación"):
     st.markdown(
         """
         En el campo del aprendizaje de máquina (específicamente en clasificación estadística),
-        una matriz de confusión permite ver el rendimiento de un algoritmo, generalmente uno supervisado
+        una matriz de confusión permite ver el rendimiento de un algoritmo, generalmente uno supervisado.
         """
     )
