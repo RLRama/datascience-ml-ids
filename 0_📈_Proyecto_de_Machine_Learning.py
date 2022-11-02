@@ -26,7 +26,7 @@ st.image(
 st.title("Aplicación web de clasificación binaria")
 st.sidebar.title("Parámetros de clasificación binaria")
 st.markdown("Detección de tipo de tumor (benigno o maligno)")
-st.caption("En esta oportunidad, 1 (uno) corresponde a detecciones malignas y 0 (cero) a detecciones benignas")
+st.markdown("**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**")
 st.sidebar.markdown("Ingeniería en Software - The RAMBros")
 
 df = load_data()
@@ -39,3 +39,5 @@ plt.title("Diagnósticos tomados")
 plt.xticks(fontsize=12)
 sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
+
+sns.pairplot(df, hue="diagnosis")
