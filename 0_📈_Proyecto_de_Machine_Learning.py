@@ -39,5 +39,3 @@ plt.title("Diagnósticos tomados")
 plt.xticks(fontsize=12)
 sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
-
-sns.pairplot(df, hue="diagnosis")
