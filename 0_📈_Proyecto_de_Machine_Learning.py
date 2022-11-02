@@ -20,12 +20,18 @@ from sklearn.metrics import accuracy_score
 
 labelencoder_Y = LabelEncoder()
 
-@st.cache
+@st.cache(persist=True)
 def load_data():
     df = pd.read_csv('data.csv')
     df = df.dropna(axis=1)
     df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
     return df
+
+@st.cache(persist=True)
+def split(df):
+    X = df.iloc[:, 2:31].values
+    Y = df.iloc[:, 1].values
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
 
 st.set_page_config(
     page_title="Predicción con ML",
@@ -93,10 +99,6 @@ with st.expander("Ver explicación"):
         de cómo se agrupa o varía el fenómeno sobre el espacio.
         """
     )
-
-X = df.iloc[:, 2:31].values
-Y = df.iloc[:, 1].values
-X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
 
 sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
