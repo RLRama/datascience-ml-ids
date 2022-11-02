@@ -13,6 +13,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score
 
 labelencoder_Y = LabelEncoder()
 
@@ -179,3 +181,11 @@ with st.expander("Ver explicación"):
         una matriz de confusión permite ver el rendimiento de un algoritmo, generalmente uno supervisado.
         """
     )
+
+st.subheader("Datos adicionales")
+st.markdown("Otras métricas y otras formas de obtener la precisión del clasificador a prueba")
+for i in range(len(model)):
+  st.write('Modelo ',i)
+  st.write( classification_report(Y_test, model[i].predict(X_test)) )
+  st.write( accuracy_score(Y_test, model[i].predict(X_test)))
+  st.write()
