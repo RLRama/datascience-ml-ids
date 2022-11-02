@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 
+labelencoder_Y = LabelEncoder()
+
 st.set_page_config(
     page_title="Vista de gráficos",
     page_icon="🤖",
