@@ -14,3 +14,14 @@ st.image(
     width=100
 )
 
+@st.cache
+def load_data():
+    df = pd.read_csv('data.csv')
+    df = df.dropna(axis=1)
+    df.iloc[:,1] = labelencoder_Y.fit_transform(df.iloc[:,1].values)
+    return df
+
+df = load_data()
+
+fig3 = sns.pairplot(df, hue="diagnosis")
+st.pyplot(fig3)
