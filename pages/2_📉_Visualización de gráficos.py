@@ -51,17 +51,47 @@ with st.expander("Ver explicación"):
 
 st.subheader('Gráficos de relación de pares')
 st.markdown('Grafican relaciones de pares, de forma que cada variable es mostrada junto a la otra (**0** y **1**)')
-st.caption('Medidas de radio de tumor (media, desvío estándar y peor caso)')
+st.caption('Medidas de radio de tumor (media, error estándar y peor caso)')
 radius = df[['radius_mean','radius_se','radius_worst','diagnosis']]
 fig4 = sns.pairplot(radius, hue='diagnosis',palette="husl", markers=["o", "s"],size=4)
 st.pyplot(fig4)
 
-st.caption('Medidas de textura de tumor (media, desvío estándar y peor caso)')
+st.caption('Medidas de textura de tumor (media, error estándar y peor caso)')
 texture = df[['texture_mean','texture_se','texture_worst','diagnosis']]
 fig5 = sns.pairplot(texture, hue='diagnosis', palette="Blues_d",size=4, kind="reg")
 st.pyplot(fig5)
 
-st.caption('Medidas de perímetro de tumor (media, desvío estándar y peor caso)')
+st.caption('Medidas de perímetro de tumor (media, error estándar y peor caso)')
 perimeter = df[['perimeter_mean','perimeter_se','perimeter_worst','diagnosis']]
 fig6 = sns.pairplot(perimeter, hue='diagnosis', size = 4, kind="reg")
 st.pyplot(fig6)
+
+st.caption('Medidas de área de tumor (media, error estándar y peor caso)')
+area = df[['area_mean','area_se','area_worst','diagnosis']]
+fig7 = sns.pairplot(area, hue='diagnosis', size =4)
+st.pyplot(fig7)
+
+st.caption('Medidas de lisura de tumor (media, error estándar y peor caso)')
+smoothness = df[['smoothness_mean','smoothness_se','smoothness_worst','diagnosis']]
+fig8 = sns.pairplot(smoothness, hue='diagnosis')
+st.pyplot(fig8)
+
+st.caption('Medidas de compacidad de tumor (media, error estándar y peor caso)')
+compactness = df[['compactness_mean','compactness_se','compactness_worst','diagnosis']]
+fig9 = sns.pairplot(compactness, hue='diagnosis')
+st.pyplot(fig9)
+
+st.caption('Medidas de concavidad de tumor (media, error estándar y peor caso)')
+concavity = df[['concavity_mean','concavity_se','concavity_worst','diagnosis']]
+fig10 = sns.pairplot(concavity, hue='diagnosis')
+st.pyplot(fig10)
+
+st.caption('Medidas de puntos cóncavos de tumor (media, error estándar y peor caso)')
+concave_points = df[['concave points_mean','concave points_se','concave points_worst','diagnosis']]
+fig11 = sns.pairplot(concave_points, hue='diagnosis')
+st.pyplot(fig11)
+
+st.caption('Medidas de simetría de tumor (media, error estándar y peor caso)')
+symmetry = df[['symmetry_mean','symmetry_se','symmetry_worst','diagnosis']]
+fig12 = sns.pairplot(symmetry, hue='diagnosis')
+st.pyplot(fig12)
