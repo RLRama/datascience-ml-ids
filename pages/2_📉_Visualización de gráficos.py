@@ -36,9 +36,6 @@ y = df.diagnosis
 list = ['Unnamed: 32','id','diagnosis']
 x = df.drop(list, axis = 1)
 
-st.subheader("Información estadística del conjunto de datos")
-st.dataframe(x.describe())
-
 st.subheader('Matriz de correlación')
 st.markdown('Ayuda a comprender la correlación entre las variables')
 fig3 = plt.figure(figsize=(20,20))
