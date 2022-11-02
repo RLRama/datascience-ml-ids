@@ -130,6 +130,11 @@ def models(X_train,Y_train):
   return log, knn, svc_lin, svc_rbf, gauss, tree, forest
 
 st.subheader("Puntuaciones de precisión")
+st.markdown(
+    """
+    Observamos la puntuación de precisión de cada uno de los modelos usados
+    """
+)
 model = models(X_train,Y_train)
 with st.expander("Ver explicación"):
     st.markdown(
@@ -137,7 +142,8 @@ with st.expander("Ver explicación"):
         Para tareas de clasificación, compara los resultados del clasificador puesto a prueba
         bajo juicios confiables externos (en este caso, los usuarios o investigadores)
         > Precisión = tp / tp + fp
-        tp = positivos verdaderos, fp = falsos positivos
+        - tp = verdaderos positivos
+        - fp = falsos positivos
         """
     )
 
