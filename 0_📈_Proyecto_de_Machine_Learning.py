@@ -34,10 +34,14 @@ st.image(
     width=100,
 )
 st.title("Aplicación web de clasificación binaria")
-st.sidebar.title("Parámetros de clasificación binaria")
 st.markdown("Detección de tipo de tumor (benigno o maligno)")
 st.markdown("**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**")
-st.sidebar.markdown("Ingeniería en Software - The RAMBros")
+st.sidebar.markdown(
+    """
+    Ingeniería en Software - año 2022
+    The RAMBros - Proyecto de ciencia de datos
+    """
+)
 
 df = load_data()
 
@@ -69,6 +73,14 @@ fig2 = plt.figure(figsize=(20,20))
 sns.heatmap(df.corr(), annot=True, fmt='.0%')
 plt.gcf().set_size_inches(40, 20)
 st.pyplot(fig2)
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        Un mapa de calor es una técnica de visualización de datos que muestra la magnitud de un fenómeno
+        como un color en dos dimensiones. La variación del color es por tono o intensidad, dando pistas visuales
+        de cómo se agrupa o varía el fenómeno sobre el espacio.
+        """
+    )
 
 X = df.iloc[:, 2:31].values
 Y = df.iloc[:, 1].values
@@ -136,3 +148,10 @@ for i in range(len(model)):
   st.write('Modelo [{}] - Precisión = {}'.format(i,  (TP + TN) / (TP + TN + FN + FP)))
   st.write()
 
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        En el campo del aprendizaje de máquina (específicamente en clasificación estadística),
+        una matriz de confusión permite ver el rendimiento de un algoritmo, generalmente uno supervisado.
+        """
+    )
