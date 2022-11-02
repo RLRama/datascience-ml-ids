@@ -1,13 +1,5 @@
 import streamlit as st
-import pandas as pd
-import numpy as np
-from sklearn.svm import SVC
-from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
-from sklearn.metrics import precision_score, recall_score
+
 
 def wikia():
     st.title("Modelos de aprendizaje utilizados")
@@ -54,11 +46,11 @@ def wikia():
         Sirve para clasificar valores buscando los puntos de datos “similares” aprendidos en la etapa de entrenamiento y haciendo conjeturas de nuevos puntos basado en esa clasificación.
         Busca observaciones más cercanas a la que se está tratando de predecir y clasificar el punto de interés basado en la mayoría de datos que le rodean.
         Se aplica en Sistemas de recomendación, búsqueda semántica y detección de anomalías.
-        - Ventajas
+        #### Ventajas
         Es sencillo de aprender e implementar
-        - Desventajas
+        #### Desventajas
         Utiliza todo el dataset para entrenar “cada punto” y por eso requiere de uso de mucha memoria y recursos de procesamiento.
-        - ¿Cómo funciona?
+        #### ¿Cómo funciona?
         1. Calcular la distancia entre el ítem a clasificar y el resto de ítems del dataset de entrenamiento,
         2. Seleccionar los “k” elementos más cercanos.
         3. Realizar una “votación de mayoría” entre los k puntos: los de una clase/etiqueta que “dominen” decidirán su clasificación final.
