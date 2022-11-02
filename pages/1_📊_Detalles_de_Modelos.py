@@ -69,11 +69,11 @@ def wikia():
         """)
     st.image("https://live.staticflickr.com/65535/47792141631_5788f52f0c_b.jpg")
     st.markdown(   
-        """"
-        P(h): es la probabilidad de que la hipótesis h sea cierta (independientemente de los datos). Esto se conoce como la probabilidad previa de h.
-        P(D): probabilidad de los datos (independientemente de la hipótesis). Esto se conoce como probabilidad previa.
-        P(h|D): es la probabilidad de la hipótesis h dada los datos D. Esto se conoce como la probabilidad posterior.
-        En caso de que se tenga una sola característica, el clasificador Naive Bayes calcula la probabilidad de un evento en los siguientes pasos:
+        """
+        - P(h): es la probabilidad de que la hipótesis h sea cierta (independientemente de los datos). Esto se conoce como la probabilidad previa de h.
+        - P(D): probabilidad de los datos (independientemente de la hipótesis). Esto se conoce como probabilidad previa.
+        - P(h|D): es la probabilidad de la hipótesis h dada los datos D. Esto se conoce como la probabilidad posterior.
+        #### Pasos para que el clasificador Naive Bayes calcule la probabilidad de un evento:
         - Paso 1: calcular la probabilidad previa para las etiquetas de clase dadas.
         - Paso 2: determinar la probabilidad de probabilidad con cada atributo para cada clase.
         - Paso 3: poner estos valores en el teorema de Bayes y calcular la probabilidad posterior.
