@@ -32,6 +32,8 @@ def load_data():
 
 df = load_data()
 
+st.write(df.head())
+
 st.subheader('Matriz de correlación')
 st.markdown('Ayuda a comprender la correlación entre las variables')
 fig3 = plt.figure(figsize=(20,20))
