@@ -1,5 +1,14 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Información de modelos",
+    page_icon="🤖",
+)
+
+st.image(
+    "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/open-book_1f4d6.png",
+    width=100
+)
 
 def wikia():
     st.title("Modelos de aprendizaje utilizados")
