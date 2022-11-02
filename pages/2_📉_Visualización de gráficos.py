@@ -49,3 +49,6 @@ with st.expander("Ver explicación"):
         """
     )
 
+st.subheader('Matriz de confusión')
+plot_confusion_matrix(model, x_test, y_test, display_labels=class_names)
+st.pyplot()
