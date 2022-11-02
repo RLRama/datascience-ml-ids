@@ -13,7 +13,8 @@ from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix
-
+from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score
 
 labelencoder_Y = LabelEncoder()
 
@@ -34,12 +35,21 @@ st.image(
     width=100,
 )
 st.title("Aplicación web de clasificación binaria")
-st.markdown("Detección de tipo de tumor (benigno o maligno)")
-st.markdown("**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**")
+st.markdown(
+    """
+    - Detección de tipo de tumor (benigno o maligno)
+    - **1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**
+    - [Enlace de acceso al conjunto de datos original](https://www.kaggle.com/datasets/uciml/breast-cancer-wisconsin-data)
+    """
+)
+
 st.sidebar.markdown(
     """
-    Ingeniería en Software - año 2022
-    The RAMBros - Proyecto de ciencia de datos
+    - Ingeniería en Software
+    - Universidad Nacional de La Rioja
+    - 2022
+    - The RAMBros
+    - Proyecto de ciencia de datos
     """
 )
 
@@ -130,7 +140,23 @@ def models(X_train,Y_train):
   
   return log, knn, svc_lin, svc_rbf, gauss, tree, forest
 
+st.subheader("Puntuaciones de precisión")
+st.markdown(
+    """
+    Observamos la puntuación de precisión de cada uno de los modelos usados
+    """
+)
 model = models(X_train,Y_train)
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        Para tareas de clasificación, compara los resultados del clasificador puesto a prueba
+        bajo juicios confiables externos (en este caso, los usuarios o investigadores)
+        > Precisión = tp / tp + fp
+        - tp = verdaderos positivos
+        - fp = falsos positivos
+        """
+    )
 
 st.subheader("Matrices de confusión")
 st.markdown("Construcción de matriz de confusión por cada modelo")
@@ -155,3 +181,11 @@ with st.expander("Ver explicación"):
         una matriz de confusión permite ver el rendimiento de un algoritmo, generalmente uno supervisado.
         """
     )
+
+st.subheader("Datos adicionales")
+st.markdown("Otras métricas y otras formas de obtener la precisión del clasificador a prueba")
+for i in range(len(model)):
+  st.write('Modelo ',i)
+  st.write( classification_report(Y_test, model[i].predict(X_test)) )
+  st.write( accuracy_score(Y_test, model[i].predict(X_test)))
+  st.write()
