@@ -50,7 +50,7 @@ with st.expander("Ver explicación"):
     )
 
 st.subheader('Gráficos de relación de pares')
-st.markdown('Grafican relaciones de pares, de forma que cada variable es mostrada junto a la otra (**0** y **1**)')
+st.markdown('Grafican relaciones de pares, de forma que cada variable es mostrada junto a la otra (**0 [benigno]** y **1 [maligno]**)')
 st.caption('Medidas de radio de tumor (media, error estándar y peor caso)')
 radius = df[['radius_mean','radius_se','radius_worst','diagnosis']]
 fig4 = sns.pairplot(radius, hue='diagnosis',palette="husl", markers=["o", "s"],size=4)
@@ -95,3 +95,18 @@ st.caption('Medidas de simetría de tumor (media, error estándar y peor caso)')
 symmetry = df[['symmetry_mean','symmetry_se','symmetry_worst','diagnosis']]
 fig12 = sns.pairplot(symmetry, hue='diagnosis')
 st.pyplot(fig12)
+
+st.caption('Medidas de dimensión fractal de tumor (media, error estándar y peor caso)')
+fractal_dimension = df[['fractal_dimension_mean','fractal_dimension_se','fractal_dimension_worst','diagnosis']]
+fig13 = sns.pairplot(fractal_dimension, hue='diagnosis')
+st.pyplot(fig13)
+
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        Un gráfico de relación de pares es una visualización de datos que imprime
+        relaciones de pares entre las variables de un conjunto de datos. Este permite entender
+        mejor las relaciones visualmente. Cada variable se imprime en las filas y columnas, mostrando
+        la relación entre variables.
+        """
+    )

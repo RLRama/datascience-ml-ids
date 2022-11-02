@@ -71,6 +71,8 @@ plt.title("Diagnósticos tomados")
 plt.xticks(fontsize=12)
 sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
+y = df.diagnosis
+diagB, diagM = y.value_counts()
 
 st.markdown("**Correlación** entre las columnas")
 st.dataframe(df.corr())
