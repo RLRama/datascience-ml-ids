@@ -96,13 +96,16 @@ def models(X_train,Y_train):
   forest = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
   forest.fit(X_train, Y_train)
 
-  st.write('[0] Precisión de regresión logística:', log.score(X_train, Y_train))
-  st.write('[1] Precisión de k-vecinos más cercanos:', knn.score(X_train, Y_train))
-  st.write('[2] Precisión de máquina de vector soporte (rbf):', svc_lin.score(X_train, Y_train))
-  st.write('[3] Precisión de máquina de vector soporte (lineal):', svc_rbf.score(X_train, Y_train))
-  st.write('[4] Precisión de Naive Bayes (Gaussiana):', gauss.score(X_train, Y_train))
-  st.write('[5] Precisión de árbol de decisión:', tree.score(X_train, Y_train))
-  st.write('[6] Precisión de bosque aleatorio:', forest.score(X_train, Y_train))
+  print('[0] Precisión de regresión logística:', log.score(X_train, Y_train))
+  print('[1] Precisión de k-vecinos más cercanos:', knn.score(X_train, Y_train))
+  print('[2] Precisión de máquina de vector soporte (rbf):', svc_lin.score(X_train, Y_train))
+  print('[3] Precisión de máquina de vector soporte (lineal):', svc_rbf.score(X_train, Y_train))
+  print('[4] Precisión de Naive Bayes (Gaussiana):', gauss.score(X_train, Y_train))
+  print('[5] Precisión de árbol de decisión:', tree.score(X_train, Y_train))
+  print('[6] Precisión de bosque aleatorio:', forest.score(X_train, Y_train))
   
   return log, knn, svc_lin, svc_rbf, gauss, tree, forest
 
+model = models(X_train,Y_train)
+
+st.write(model)
