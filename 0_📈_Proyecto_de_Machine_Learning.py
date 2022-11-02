@@ -41,7 +41,7 @@ sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
 
 st.markdown("**Correlación** entre las columnas")
-df.corr()
+st.dataframe(df.corr())
 
 st.markdown("**Mapa de calor** para visualizar la **correlación** entre las columnas")
 fig2 = plt.figure(figsize=(20,20))
