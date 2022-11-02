@@ -38,8 +38,7 @@ st.markdown("Detección de tipo de tumor (benigno o maligno)")
 st.markdown("**1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**")
 st.sidebar.markdown(
     """
-    Ingeniería en Software - año 2022
-    The RAMBros - Proyecto de ciencia de datos
+    Ingeniería en Software - año 2022 - The RAMBros - Proyecto de ciencia de datos
     """
 )
 
@@ -130,7 +129,15 @@ def models(X_train,Y_train):
   
   return log, knn, svc_lin, svc_rbf, gauss, tree, forest
 
+st.subheader("Puntuaciones de precisión")
 model = models(X_train,Y_train)
+with st.expander("Ver explicación"):
+    st.markdown(
+        """
+        Para tareas de clasificación, compara los resultados del clasificador puesto a prueba
+        bajo juicios confiables externos (en este caso, los usuarios o investigadores)
+        """
+    )
 
 st.subheader("Matrices de confusión")
 st.markdown("Construcción de matriz de confusión por cada modelo")
