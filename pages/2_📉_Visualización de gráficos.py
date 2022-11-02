@@ -49,8 +49,4 @@ with st.expander("Ver explicación"):
         """
     )
 
-fig4 = plt.figure(figsize=(8,6))
-plt.title("Diagnósticos tomados")
-plt.xticks(fontsize=12)
-sns.pie(x="diagnosis",data=df)
-st.pyplot(fig4)
+st.line_chart(x="diagnosis",data=df)
