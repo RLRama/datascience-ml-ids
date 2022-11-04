@@ -47,7 +47,7 @@ st.markdown(
     """
 )
 
-st.header("k-Nearest Neighbor")
+st.header("k-vecinos más cercanos")
 st.markdown(
     """
     Es un algoritmo basado en instancia de tipo supervisado de ML. Puede usarse para clasificar nuevas muestras(valores discretos) o para predecir(regresión,valores continuos).
@@ -55,9 +55,9 @@ st.markdown(
     Busca observaciones más cercanas a la que se está tratando de predecir y clasificar el punto de interés basado en la mayoría de datos que le rodean.
     Se aplica en Sistemas de recomendación, búsqueda semántica y detección de anomalías.
     #### Ventajas
-    Es sencillo de aprender e implementar
+    - Es sencillo de aprender e implementar
     #### Desventajas
-    Utiliza todo el dataset para entrenar “cada punto” y por eso requiere de uso de mucha memoria y recursos de procesamiento.
+    - Utiliza todo el dataset para entrenar “cada punto” y por eso requiere de uso de mucha memoria y recursos de procesamiento.
     #### ¿Cómo funciona?
     1. Calcular la distancia entre el ítem a clasificar y el resto de ítems del dataset de entrenamiento,
     2. Seleccionar los “k” elementos más cercanos.
@@ -88,7 +88,7 @@ st.markdown(
     4. ver qué clase tiene una probabilidad más alta, dado que la variable de entrada pertenece a la clase de probabilidad más alta.
     #### Ventajas
     - Es fácil y rápido predecir la clase de conjunto de datos de prueba. También funciona bien en la predicción multiclase.
-    - Cuando se mantiene la suposición de independencia, un clasificador Naive Bayes funciona mejor en comparación con otros modelos como la Regresión Logística y se necesitan menos datos de entrenamiento.
+    - Cuando se mantiene la suposición de independencia, un clasificador bayesiano ingenuo funciona mejor en comparación con otros modelos como la Regresión Logística y se necesitan menos datos de entrenamiento.
     - Funciona bien en el caso de variables de entrada categóricas comparada con variables numéricas.
     #### Desventajas
     - Si la variable categórica tiene una categoría en el conjunto de datos de prueba, que no se observó en el conjunto de datos de entrenamiento, el modelo asignará una probabilidad de 0 y no podrá hacer una predicción. Esto se conoce a menudo como frecuencia cero. Para resolver esto, podemos utilizar la técnica de alisamiento.
