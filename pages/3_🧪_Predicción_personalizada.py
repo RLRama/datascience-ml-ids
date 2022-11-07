@@ -43,6 +43,8 @@ st.markdown(
     """
 )
 
+st.dataframe(df)
+
 X = df.iloc[:, 2:31].values
 Y = df.iloc[:, 1].values
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
@@ -54,4 +56,3 @@ X_test = sc.transform(X_test)
 forest = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
 forest.fit(X_train, Y_train)
 
-new_sample = np.array([])
