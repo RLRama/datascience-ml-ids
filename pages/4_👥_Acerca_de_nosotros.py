@@ -39,7 +39,7 @@ with tab1: ### Pagina Rodrigo
 
 with tab2: ### Pagina Santiago
    
-   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+   st.image("DSSI.png", width=200)
    st.markdown(
       """
       ### Nombre
@@ -87,7 +87,7 @@ with tab3: ### Pagina Juan Cruz
 
 with tab4: ### Pagina Ramiro
    
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   st.image("RLRI.png", width=200)
    st.markdown(
       """
       ### Nombre
