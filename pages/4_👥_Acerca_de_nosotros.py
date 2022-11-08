@@ -24,8 +24,20 @@ with tab2:
       """
       ### Nombre
       - Dominguez Sotomayor Santiago Ismael
-      
-      
+      ---
+      ### Matrícula
+      - EISI782
+      ---
+      ### Fecha de Nacimiento
+      - 04/05/01
+      ---
+      ### Redes Sociales
+      - [Perfil en Instagram](https://www.instagram.com/santidominguez01/)
+      - [Perfil en Github](https://github.com/SantiDominguez1)
+      - [Perfil en Linkedin](https://www.linkedin.com/in/santiago-ismael-dominguez-sotomayor-a55009225//)
+      ---
+      ### Correo Electrónico
+      - santiuni04@gmail.com
       """
    )
 
