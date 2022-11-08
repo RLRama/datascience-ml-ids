@@ -20,6 +20,26 @@ with tab1:
 with tab2:
    st.header("A dog")
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+   st.markdown(
+      """"
+         ### Nombre
+        - Dominguez Sotomayor Santiago Ismael
+        ---
+         ### Matrícula
+        - EISI782
+        ---
+         ### Fecha de nacimiento
+        - 04/05/01
+        ---
+         ### Redes sociales
+        - [Perfil en Instagram](https://www.instagram.com/santidominguez01/)
+        - [Perfil en GitHub](https://github.com/SantiDominguez1)
+        - [Perfil en LinkedIn](https://www.linkedin.com/in/santiago-ismael-dominguez-sotomayor-a55009225//)
+        ---
+         ### Correo electrónico
+        - santiuni04@gmail.com
+        """
+   )
 
 with tab3:
    st.header("An owl")
