@@ -20,7 +20,7 @@ with tab1: ### Pagina Rodrigo
    st.markdown(
       """
       ### Nombre
-      - Cano Angel Rodrigo
+      - Cano Ángel Rodrigo
       ---
       ### Matrícula
       - EISI821
@@ -34,7 +34,7 @@ with tab1: ### Pagina Rodrigo
       - [Perfil en Linkedin](https://www.linkedin.com/in/rodrigo-cano-4bb070219/)
       ---
       ### Correo Electrónico
-      -  rodrigocano765@gmail.com
+      - rodrigocano765@gmail.com
       """
    )
 
@@ -112,6 +112,7 @@ with tab4: ### Pagina Ramiro
 
 st.markdown(
    """
+   ---
    ### Información académica
     - Carrera: Ingeniería en Sistemas de Información
     - Cátedra: Seminario de Actualización II
