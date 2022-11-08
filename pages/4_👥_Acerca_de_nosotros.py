@@ -112,7 +112,6 @@ with tab4: ### Pagina Ramiro
 
 st.markdown(
    """
-   ---
    ### Información académica
     - Carrera: Ingeniería en Sistemas de Información
     - Cátedra: Seminario de Actualización II
