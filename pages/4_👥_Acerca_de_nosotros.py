@@ -29,8 +29,8 @@ with tab1:
       ---
       ### Redes Sociales
       - [Perfil en Instagram](https://www.instagram.com/cano.rodrigo10/)
-      - [Perfil en Github](https://www.linkedin.com/in/rodrigo-cano-4bb070219/)
-      - [Perfil en Linkedin](https://github.com/Canoro10)
+      - [Perfil en Github](https://github.com/Canoro10)
+      - [Perfil en Linkedin](https://www.linkedin.com/in/rodrigo-cano-4bb070219/)
       ---
       ### Correo Electrónico
       -  rodrigocano765@gmail.com
