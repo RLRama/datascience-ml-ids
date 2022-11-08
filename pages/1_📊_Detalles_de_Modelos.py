@@ -71,7 +71,7 @@ st.markdown(
 st.header("Clasificador bayesiano ingenuo")
 st.markdown(
     """
-    Es uno de los algoritmos más simples y poderosos para la clasificación basado en el Teorema de Bayes con una suposición de independencia entre los predictores. Es fácil de construir y útil para conjuntos de datos muy grandes.
+    Es uno de los algoritmos más simples y poderosos para la clasificación basado en el teorema de Bayes con una suposición de independencia entre los predictores. Es fácil de construir y útil para conjuntos de datos muy grandes.
     El clasificador asume que el efecto de una característica particular en una clase es independiente de otras características.
     La fórmula es:
     """)
@@ -81,7 +81,7 @@ st.markdown(
     - P(h): es la probabilidad de que la hipótesis h sea cierta (independientemente de los datos). Esto se conoce como la probabilidad previa de h.
     - P(D): probabilidad de los datos (independientemente de la hipótesis). Esto se conoce como probabilidad previa.
     - P(h|D): es la probabilidad de la hipótesis h dada los datos D. Esto se conoce como la probabilidad posterior.
-    #### Pasos para que el clasificador Naive Bayes calcule la probabilidad de un evento:
+    #### Pasos para que el clasificador bayesiano ingenuo calcule la probabilidad de un evento:
     1. calcular la probabilidad previa para las etiquetas de clase dadas.
     2. determinar la probabilidad de probabilidad con cada atributo para cada clase.
     3. poner estos valores en el teorema de Bayes y calcular la probabilidad posterior.
@@ -92,6 +92,6 @@ st.markdown(
     - Funciona bien en el caso de variables de entrada categóricas comparada con variables numéricas.
     #### Desventajas
     - Si la variable categórica tiene una categoría en el conjunto de datos de prueba, que no se observó en el conjunto de datos de entrenamiento, el modelo asignará una probabilidad de 0 y no podrá hacer una predicción. Esto se conoce a menudo como frecuencia cero. Para resolver esto, podemos utilizar la técnica de alisamiento.
-    - Otra limitación de Naive Bayes es la asunción de predictores independientes. En la vida real, es casi imposible que obtengamos un conjunto de predictores que sean completamente independientes.
+    - Otra limitación del clasificador bayesiano ingenuo es la asunción de predictores independientes. En la vida real, es casi imposible que obtengamos un conjunto de predictores que sean completamente independientes.
     """
 )
