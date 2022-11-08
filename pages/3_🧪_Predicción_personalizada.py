@@ -107,8 +107,8 @@ prediction = forest.predict([[sp_radius_mean,sp_texture_mean,sp_perimeter_mean,s
 
 if st.button('Generar predicción'):
     if prediction == 1:
-        st.error("La predicción para la nueva muestra es MALIGNO")
+        st.error("La predicción para la nueva muestra de tejido de tumor es: MALIGNO")
     elif prediction == 0:
-        st.success("La predicción para la nueva muestra es BENIGNO")
+        st.success("La predicción para la nueva muestra de tejido de tumor es: BENIGNO")
 else:
     st.warning("Esperando presentación de muestra...")
