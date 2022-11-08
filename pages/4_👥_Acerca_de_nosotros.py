@@ -66,6 +66,26 @@ with tab3:
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
 with tab4:
-   st.header("An owl")
+   
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   st.markdown(
+      """
+      ### Nombre
+      - Rios Lopez Ramiro Ignacio
+      ---
+      ### Matrícula
+      - EISI801
+      ---
+      ### Fecha de Nacimiento
+      - 11/06/01
+      ---
+      ### Redes Sociales
+      - [Perfil en Instagram](https://www.instagram.com/rama.riosl/)
+      - [Perfil en Github](https://github.com/RLRama)
+      - [Perfil en Linkedin](https://www.linkedin.com/in/ramiro-ignacio-rios-lopez-bb1006225/)
+      ---
+      ### Correo Electrónico
+      - rl.ramiro11@gmail.com
+      """
+   )
 
