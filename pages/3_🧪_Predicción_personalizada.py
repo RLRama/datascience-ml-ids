@@ -51,8 +51,18 @@ sc = StandardScaler()
 X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
+st.dataframe(df)
+st.dataframe(X)
+
 forest = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
 forest.fit(X_train, Y_train)
 
+st.header("Creación de nueva muestra personalizada")
+st.markdown(
+    """
+    Sección de medidas promedio (media)
+    """
+)
 
-st.dataframe(X)
+sample_radius_mean = st.slider('radius_mean (Radio de tejido)', min_value=6.981, max_value=28.11, value=14.127291739894552)
+st.write('radius_mean (Radio de tejido) = ', sample_radius_mean)
