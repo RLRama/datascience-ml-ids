@@ -111,9 +111,9 @@ new_sample = np.array([sp_radius_mean,sp_texture_mean,sp_perimeter_mean,sp_area_
 prediction = forest.predict(new_sample)[0]
 
 if st.button('Generar predicción'):
-    if prediction=="1":
+    if prediction=="M":
         st.warning("Diagnóstico de tejido de tumor: MALIGNO")
-    elif prediction=="0":
+    elif prediction=="B":
         st.success("Diagnóstico de tejido de tumor: BENIGNO")
 else:
     st.warning("Esperando presentación de muestra...")
