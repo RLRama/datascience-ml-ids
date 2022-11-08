@@ -59,22 +59,22 @@ st.subheader('Gráficos de relación de pares')
 st.markdown('Grafican relaciones de pares, de forma que cada variable es mostrada junto a la otra (**0 [benigno]** y **1 [maligno]**)')
 st.caption('Medidas de radio de tumor (media, error estándar y peor caso)')
 radius = df[['radius_mean','radius_se','radius_worst','diagnosis']]
-fig4 = sns.pairplot(radius, hue='diagnosis',palette="husl", markers=["o", "s"],size=4)
+fig4 = sns.pairplot(radius, hue='diagnosis',palette="husl", markers=["o", "s"],height=4)
 st.pyplot(fig4)
 
 st.caption('Medidas de textura de tumor (media, error estándar y peor caso)')
 texture = df[['texture_mean','texture_se','texture_worst','diagnosis']]
-fig5 = sns.pairplot(texture, hue='diagnosis', palette="Blues_d",size=4, kind="reg")
+fig5 = sns.pairplot(texture, hue='diagnosis', palette="Blues_d",height=4, kind="reg")
 st.pyplot(fig5)
 
 st.caption('Medidas de perímetro de tumor (media, error estándar y peor caso)')
 perimeter = df[['perimeter_mean','perimeter_se','perimeter_worst','diagnosis']]
-fig6 = sns.pairplot(perimeter, hue='diagnosis', size = 4, kind="reg")
+fig6 = sns.pairplot(perimeter, hue='diagnosis', height = 4, kind="reg")
 st.pyplot(fig6)
 
 st.caption('Medidas de área de tumor (media, error estándar y peor caso)')
 area = df[['area_mean','area_se','area_worst','diagnosis']]
-fig7 = sns.pairplot(area, hue='diagnosis', size =4)
+fig7 = sns.pairplot(area, hue='diagnosis', height = 4)
 st.pyplot(fig7)
 
 st.caption('Medidas de lisura de tumor (media, error estándar y peor caso)')
