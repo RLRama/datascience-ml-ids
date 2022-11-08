@@ -16,7 +16,7 @@ tab1, tab2, tab3, tab4 = st.tabs(["Cano Ángel Rodrigo", "Dominguez Sotomayor Sa
 with tab1:
    
    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-      st.markdown(
+   st.markdown(
       """
       ### Nombre
       - Cano Angel Rodrigo
