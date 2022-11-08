@@ -67,14 +67,10 @@ st.markdown(
     """
 )
 
-list = ['id','diagnosis']
-x = df.drop(list,axis=1)
-df1 = x.describe(include='all').fillna("").astype("str")
-
 fig = plt.figure(figsize=(8,6))
 plt.title("Diagnósticos tomados")
 plt.xticks(fontsize=12)
-sns.countplot(x="diagnosis",data=df1)
+sns.countplot(x="diagnosis",data=df)
 st.pyplot(fig)
 y = df.diagnosis
 diagB, diagM = y.value_counts()
