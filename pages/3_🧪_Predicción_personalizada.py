@@ -69,7 +69,7 @@ sp_compactness_mean = st.slider('compactness_mean (Compacidad de tejido)', min_v
 sp_concavity_mean = st.slider('concavity_mean (Concavidad de tejido)', min_value=0.0, max_value=0.4268, value=0.0887993158172232)
 sp_concave_points_mean = st.slider('concave_points_mean (Puntos cóncavos de tejido)', min_value=0.0, max_value=0.2012, value=0.04891914586994728)
 sp_symmetry_mean = st.slider('symmetry_mean (Simetría de tejido)', min_value=0.106, max_value=0.304, value=0.18116186291739894)
-sp_fractal_dimension_mean = st.slider('fractal_dimension_mean (Dmiensión fractal de tejido)', min_value=0.04996, max_value=0.09744, value=0.06279760984182776)
+sp_fractal_dimension_mean = st.slider('fractal_dimension_mean (Dimensión fractal de tejido)', min_value=0.04996, max_value=0.09744, value=0.06279760984182776)
 
 st.markdown(
     """
@@ -85,7 +85,7 @@ sp_compactness_se = st.slider('compactness_se (Compacidad de tejido)', min_value
 sp_concavity_se = st.slider('concavity_se (Concavidad de tejido)', min_value=0.0, max_value=0.396, value=0.03189371634446397)
 sp_concave_points_se = st.slider('concave_points_se (Puntos cóncavos de tejido)', min_value=0.0, max_value=0.05279, value=0.011796137082601054)
 sp_symmetry_se = st.slider('symmetry_se (Simetría de tejido)', min_value=0.007882, max_value=0.07895, value=0.02054229876977153)
-sp_fractal_dimension_se = st.slider('fractal_dimension_se (Dmiensión fractal de tejido)', min_value=0.0008948, max_value=0.02984, value=0.0037949038664323374)
+sp_fractal_dimension_se = st.slider('fractal_dimension_se (Dimensión fractal de tejido)', min_value=0.0008948, max_value=0.02984, value=0.0037949038664323374)
 
 st.markdown(
     """
@@ -101,14 +101,16 @@ sp_compactness_worst = st.slider('compactness_worst (Compacidad de tejido)', min
 sp_concavity_worst = st.slider('concavity_worst (Concavidad de tejido)', min_value=0.0, max_value=1.252, value=0.27218848330404216)
 sp_concave_points_worst = st.slider('concave_points_worst (Puntos cóncavos de tejido)', min_value=0.0, max_value=0.291, value=0.11460622319859401)
 sp_symmetry_worst = st.slider('symmetry_worst (Simetría de tejido)', min_value=0.1565, max_value=0.6638, value=0.2900755711775044)
-sp_fractal_dimension_worst = st.slider('fractal_dimension_worst (Dmiensión fractal de tejido)', min_value=0.05504, max_value=0.2075, value=0.0839458172231986)
+sp_fractal_dimension_worst = st.slider('fractal_dimension_worst (Dimensión fractal de tejido)', min_value=0.05504, max_value=0.2075, value=0.0839458172231986)
 
 prediction = forest.predict([[sp_radius_mean,sp_texture_mean,sp_perimeter_mean,sp_area_mean,sp_smoothness_mean,sp_compactness_mean,sp_concavity_mean,sp_concave_points_mean,sp_symmetry_mean,sp_fractal_dimension_mean,sp_radius_se,sp_texture_se,sp_perimeter_se,sp_area_se,sp_smoothness_se,sp_compactness_se,sp_concavity_se,sp_concave_points_se,sp_symmetry_se,sp_fractal_dimension_se,sp_radius_worst,sp_texture_worst,sp_perimeter_worst,sp_area_worst,sp_smoothness_worst,sp_compactness_worst,sp_concavity_worst,sp_concave_points_worst,sp_symmetry_worst,sp_fractal_dimension_worst]])[0]
 
 if st.button('Generar predicción'):
     if prediction == 1:
-        st.error("La predicción para la nueva muestra de tejido de tumor es: MALIGNO")
+        st.write("La predicción para la nueva muestra de tejido de tumor es:")
+        st.error("TUMOR MALIGNO")
     elif prediction == 0:
-        st.success("La predicción para la nueva muestra de tejido de tumor es: BENIGNO")
+        st.write("La predicción para la nueva muestra de tejido de tumor es:")
+        st.error("TUMOR BENIGNO")
 else:
     st.warning("Esperando presentación de muestra...")
