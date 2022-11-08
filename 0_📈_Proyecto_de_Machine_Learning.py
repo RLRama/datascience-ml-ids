@@ -66,10 +66,15 @@ st.markdown(
     Muestra de la cantidad de observaciones por variable categórica (en este caso **1 (uno)** corresponde a **detecciones malignas** y **0 (cero)** a **detecciones benignas**)
     """
 )
+
+list = ['id','diagnosis']
+x = df.drop(list,axis=1)
+df1 = x.describe(include='all').fillna("").astype("str")
+
 fig = plt.figure(figsize=(8,6))
 plt.title("Diagnósticos tomados")
 plt.xticks(fontsize=12)
-sns.countplot(x="diagnosis",data=df)
+sns.countplot(x="diagnosis",data=df1)
 st.pyplot(fig)
 y = df.diagnosis
 diagB, diagM = y.value_counts()

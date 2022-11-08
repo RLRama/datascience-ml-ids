@@ -39,7 +39,7 @@ st.title('Predicción con nueva muestra personalizada')
 st.markdown(
     """
     - En este caso, usaremos el modelo de **bosque aleatorio**
-    - Cada muestra necesita 32 variables para poder realizar la predicción
+    - Cada muestra necesita 30 variables para poder realizar la predicción
     """
 )
 
