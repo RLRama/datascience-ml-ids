@@ -43,7 +43,7 @@ st.markdown(
     """
 )
 
-X = df.iloc[:, 2:31].values
+X = df.iloc[:, 2:32].values
 Y = df.iloc[:, 1].values
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size = 0.25, random_state = 0)
 
@@ -106,3 +106,12 @@ sp_concave_points_worst = st.slider('concave_points_worst (Puntos cóncavos de t
 sp_symmetry_worst = st.slider('symmetry_worst (Simetría de tejido)', min_value=0.1565, max_value=0.6638, value=0.2900755711775044)
 sp_fractal_dimension_worst = st.slider('fractal_dimension_worst (Dmiensión fractal de tejido)', min_value=0.05504, max_value=0.2075, value=0.0839458172231986)
 
+prediction = forest.predict([sp_radius_mean,sp_texture_mean,sp_perimeter_mean,sp_area_mean,sp_smoothness_mean,sp_compactness_mean,sp_concavity_mean,sp_concave_points_mean,sp_symmetry_mean,sp_fractal_dimension_mean,sp_radius_se,sp_texture_se,sp_perimeter_se,sp_area_se,sp_smoothness_se,sp_compactness_se,sp_concavity_se,sp_concave_points_se,sp_symmetry_se,sp_fractal_dimension_se,sp_radius_worst,sp_texture_worst,sp_perimeter_worst,sp_area_worst,sp_smoothness_worst,sp_compactness_worst,sp_concavity_worst,sp_concave_points_worst,sp_symmetry_worst,sp_fractal_dimension_worst])[0]
+
+if st.button('Generar predicción'):
+    if prediction=="1":
+        st.warning("Diagnóstico de tejido de tumor: MALIGNO")
+    elif prediction=="0":
+        st.success("Diagnóstico de tejido de tumor: BENIGNO")
+else:
+    st.warning("Esperando presentación de muestra...")
