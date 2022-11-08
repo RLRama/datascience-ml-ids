@@ -100,8 +100,9 @@ sp_texture_worst = st.slider('texture_worst (Textura de tejido)', min_value=12.0
 sp_perimeter_worst = st.slider('perimeter_worst (Perímetro de tejido)', min_value=50.41, max_value=251.2, value=107.26121265377857)
 sp_area_worst = st.slider('area_worst (Área de tejido)', min_value=185.2, max_value=4254.0, value=880.5831282952548)
 sp_smoothness_worst = st.slider('smoothness_worst (Lisura de tejido)', min_value=0.07117, max_value=0.2226, value=0.13236859402460457)
-sp_compactness_worst = st.slider('compactness_worst (Compacidad de tejido)', min_value=0.02729, max_value=0.157336488913742, value=0.25426504393673116)
+sp_compactness_worst = st.slider('compactness_worst (Compacidad de tejido)', min_value=0.02729, max_value=1.058, value=0.25426504393673116)
 sp_concavity_worst = st.slider('concavity_worst (Concavidad de tejido)', min_value=0.0, max_value=1.252, value=0.27218848330404216)
 sp_concave_points_worst = st.slider('concave_points_worst (Puntos cóncavos de tejido)', min_value=0.0, max_value=0.291, value=0.11460622319859401)
 sp_symmetry_worst = st.slider('symmetry_worst (Simetría de tejido)', min_value=0.1565, max_value=0.6638, value=0.2900755711775044)
 sp_fractal_dimension_worst = st.slider('fractal_dimension_worst (Dmiensión fractal de tejido)', min_value=0.05504, max_value=0.2075, value=0.0839458172231986)
+
