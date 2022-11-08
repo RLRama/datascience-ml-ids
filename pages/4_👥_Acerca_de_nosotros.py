@@ -22,7 +22,7 @@ with tab2:
    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
    st.markdown(
       """
-      ###Nombre
+      #### Nombre
       - Dominguez Sotomayor Santiago Ismael
       
       
