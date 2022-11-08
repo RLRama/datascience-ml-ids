@@ -14,7 +14,6 @@ st.title('Equipo de trabajo')
 tab1, tab2, tab3, tab4 = st.tabs(["Cano Ángel Rodrigo", "Dominguez Sotomayor Santiago Ismael", "Molina Leguiza Juan Cruz", "Rios Lopez Ramiro Ignacio"])
 
 with tab1: ### Pagina Rodrigo
-   
    st.image("CAR.png", width=200)
    st.markdown(
       """
@@ -25,7 +24,7 @@ with tab1: ### Pagina Rodrigo
       - EISI821
       ---
       ### Fecha de Nacimiento
-      - 07/11/2000
+      - 07/11/00
       ---
       ### Redes Sociales
       - [Perfil en Instagram](https://www.instagram.com/cano.rodrigo10/)
