@@ -62,8 +62,28 @@ with tab2:
    )
 
 with tab3:
-   st.header("An owl")
+   
    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
+   st.markdown(
+      """
+      ### Nombre
+      - Molina Leguiza Juan Cruz
+      ---
+      ### Matrícula
+      - EISI767
+      ---
+      ### Fecha de Nacimiento
+      - 29/03/01
+      ---
+      ### Redes Sociales
+      - [Perfil en Instagram](https://www.instagram.com/juancruzmolina__/)
+      - [Perfil en Github]()
+      - [Perfil en Linkedin]()
+      ---
+      ### Correo Electrónico
+      - juancruzmolina01@gmail.com
+      """
+   )
 
 with tab4:
    
