@@ -78,7 +78,7 @@ with tab3: ### Pagina Juan Cruz
       ### Redes Sociales
       - [Perfil en Instagram](https://www.instagram.com/juancruzmolina__/)
       - [Perfil en Github]()
-      - [Perfil en Linkedin]()
+      - [Perfil en Linkedin](https://www.linkedin.com/in/juan-cruz-molina-6a512822a)
       ---
       ### Correo Electrónico
       - juancruzmolina01@gmail.com
