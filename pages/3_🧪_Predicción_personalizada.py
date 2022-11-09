@@ -3,19 +3,19 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-import sklearn
-from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
-from sklearn.linear_model import LogisticRegression
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.svm import SVC
-from sklearn.naive_bayes import GaussianNB
-from sklearn.tree import DecisionTreeClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import confusion_matrix
-from sklearn.metrics import classification_report
-from sklearn.metrics import accuracy_score
+import scikit-learn
+from scikit-learn.preprocessing import LabelEncoder
+from scikit-learn.model_selection import train_test_split
+from scikit-learn.preprocessing import StandardScaler
+from scikit-learn.linear_model import LogisticRegression
+from scikit-learn.neighbors import KNeighborsClassifier
+from scikit-learn.svm import SVC
+from scikit-learn.naive_bayes import GaussianNB
+from scikit-learn.tree import DecisionTreeClassifier
+from scikit-learn.ensemble import RandomForestClassifier
+from scikit-learn.metrics import confusion_matrix
+from scikit-learn.metrics import classification_report
+from scikit-learn.metrics import accuracy_score
 
 labelencoder_Y = LabelEncoder()
 

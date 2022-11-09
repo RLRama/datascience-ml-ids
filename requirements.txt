@@ -4,7 +4,7 @@ numpy
 altair
 seaborn
 matplotlib
-sklearn
+scikit-learn
 Plotly
 cufflinks
 bokeh
