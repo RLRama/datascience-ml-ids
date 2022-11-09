@@ -7,8 +7,8 @@ import chart_studio.plotly as py
 import plotly.tools as tls
 import plotly.graph_objs as go
 import cufflinks as cf
-from scikit-learn.preprocessing import LabelEncoder
-from scikit-learn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
+from sklearn.preprocessing import LabelEncoder
+from sklearn.metrics import plot_confusion_matrix, plot_roc_curve, plot_precision_recall_curve
 
 labelencoder_Y = LabelEncoder()
 

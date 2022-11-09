@@ -3,18 +3,18 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-from scikit-learn.preprocessing import LabelEncoder
-from scikit-learn.model_selection import train_test_split
-from scikit-learn.preprocessing import StandardScaler
-from scikit-learn.linear_model import LogisticRegression
-from scikit-learn.neighbors import KNeighborsClassifier
-from scikit-learn.svm import SVC
-from scikit-learn.naive_bayes import GaussianNB
-from scikit-learn.tree import DecisionTreeClassifier
-from scikit-learn.ensemble import RandomForestClassifier
-from scikit-learn.metrics import confusion_matrix
-from scikit-learn.metrics import classification_report
-from scikit-learn.metrics import accuracy_score
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler
+from sklearn.linear_model import LogisticRegression
+from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.naive_bayes import GaussianNB
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import confusion_matrix
+from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score
 
 
 
@@ -109,31 +109,31 @@ X_test = sc.transform(X_test)
 
 def models(X_train,Y_train):
   
-  from scikit-learn.linear_model import LogisticRegression
+  from sklearn.linear_model import LogisticRegression
   log = LogisticRegression(random_state = 0)
   log.fit(X_train, Y_train)
   
-  from scikit-learn.neighbors import KNeighborsClassifier
+  from sklearn.neighbors import KNeighborsClassifier
   knn = KNeighborsClassifier(n_neighbors = 5, metric = 'minkowski', p = 2)
   knn.fit(X_train, Y_train)
 
-  from scikit-learn.svm import SVC
+  from sklearn.svm import SVC
   svc_lin = SVC(kernel = 'linear', random_state = 0)
   svc_lin.fit(X_train, Y_train)
 
-  from scikit-learn.svm import SVC
+  from sklearn.svm import SVC
   svc_rbf = SVC(kernel = 'rbf', random_state = 0)
   svc_rbf.fit(X_train, Y_train)
 
-  from scikit-learn.naive_bayes import GaussianNB
+  from sklearn.naive_bayes import GaussianNB
   gauss = GaussianNB()
   gauss.fit(X_train, Y_train)
 
-  from scikit-learn.tree import DecisionTreeClassifier
+  from sklearn.tree import DecisionTreeClassifier
   tree = DecisionTreeClassifier(criterion = 'entropy', random_state = 0)
   tree.fit(X_train, Y_train)
 
-  from scikit-learn.ensemble import RandomForestClassifier
+  from sklearn.ensemble import RandomForestClassifier
   forest = RandomForestClassifier(n_estimators = 10, criterion = 'entropy', random_state = 0)
   forest.fit(X_train, Y_train)
 
